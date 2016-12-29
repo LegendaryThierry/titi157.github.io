@@ -1,0 +1,251 @@
+/*GLOBAL*/
+
+body{
+    width: 100%;
+    overflow-x: hidden; /*Cache seulement quand ça dépasse horizontalement*/
+    margin: 0;
+    padding: 0;
+    font-family:"Open Sans", "sans-serif";
+    background-color: #fff;
+    z-index:0;
+}
+
+a{
+    color: #0070C9;
+}
+
+/*BARRE DE DEFILEMENT*/
+/*Utilisation de l'extension WebKit*/
+
+html::-webkit-scrollbar {
+    width: 1em;
+}
+ 
+html::-webkit-scrollbar-track {
+    background-color:#757575;
+}
+ 
+html::-webkit-scrollbar-thumb {
+  background-color: #BDBDBD;
+}
+
+/*MENU*/
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #616161;
+    position: fixed;
+    width:100%;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    z-index:1;
+    top:0;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a, .sousMenuBtn {
+    display: inline-block;
+    color: #fff;
+    font-size:125%;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover, .sousMenu:hover .sousMenuBtn {
+    background-color: #212121;
+}
+
+nav li.sousMenu {
+    display: inline-block;
+}
+
+.elementsSousMenu {
+    display: none;
+    position: absolute;
+    background-color: #616161;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.elementsSousMenu a {
+    color: #fff;
+    font-size:125%;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.elementsSousMenu a:hover {
+    background-color: #212121;
+}
+
+.sousMenu:hover .elementsSousMenu {
+    display: block;
+}
+
+.active{
+    background-color: #4CAF50;
+}
+
+/*PIED DE PAGE*/
+footer{
+    width:100%;
+    background-color: #303539;
+    bottom: 0;
+    margin: 0;
+    color: #fff;
+    padding-top: 0.1%;
+    padding-bottom: 0.25%;
+    bottom: 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: #fff;
+}
+
+footer a:hover{
+    color:#5C6BC0;
+}
+
+footer li{
+    list-style-type: none;
+    padding:1%;
+}
+
+footer li a:after {
+    content: ' >';
+    opacity: 0;
+}
+
+footer li:hover a:after {
+    opacity: 1;
+    right: 0;
+}
+
+footer ul {
+    float: left;
+    width: 15%;
+}
+
+footer img {
+    float: right;
+    width: 575px;
+    height: 323px;
+}
+
+hr {
+    clear:both;
+    height: 1px;
+    color: #616161;
+    background-color: #616161;
+    border: none;
+}
+
+footer p {
+    margin-left:2%;
+}
+
+/*BOUTON REVENIR EN HAUT*/
+
+.boutonHaut {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: rgba(232, 98, 86, 0.8) url(../images/flecheHaut.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+  z-index: 2;
+}
+.boutonHaut.boutonHaut-visible, .boutonHaut.boutonHaut-disparition, .boutonHaut:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.boutonHaut.boutonHaut-visible {
+  visibility: visible;
+  opacity: 1;
+}
+.boutonHaut.boutonHaut-disparition {
+  opacity: .5;
+}
+.boutonHaut:hover {
+  background-color: #e86256;
+  opacity: 1;
+}
+
+/*CSS pour écrans de tablette comprisent entre 960 et 1280 pixels*/
+
+@media all and (min-width: 960px) and (max-width: 1280px){
+    footer img {
+        width: 400px;
+        height: 300px;
+    }
+    
+    footer {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 960px){
+    ::-webkit-scrollbar { 
+        display: none; 
+    }
+    /*MENU*/
+    nav ul .btn {
+        display: none;
+        cursor: pointer;
+    }
+    nav ul li {
+        float: none;
+        display: inline;
+    }
+    nav ul .btn {
+        display: block;
+        text-align: left;
+    }
+    nav ul .menu li {
+        display: inline;
+    }
+    nav ul .menu li a {
+        padding: 0px 20px 10px 20px;
+        display: block;
+    }
+    nav ul .menu {
+        display: none;
+    }
+    nav ul li:hover .menu {
+        display: block;
+        z-index: 3;
+    }
+    
+    /*FOOTER*/
+    footer img {
+        width: 100%;
+        height: 300px;
+    }
+    
+    footer ul{
+        width: 100%;
+    }
+    
+    footer li h4 {
+        margin: 0;
+    }
+}
+
+/*TSANG Thierry*/

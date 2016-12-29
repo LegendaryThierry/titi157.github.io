@@ -1,0 +1,300 @@
+body {
+    font-family:"Open Sans", "sans-serif";
+}
+/*Minuteur*/
+fieldset{
+    text-align:center;
+    margin-top: 5%;
+}
+#minuteur{
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+}
+legend{
+    color:#000;
+    font-size:2em;
+}
+#minuteur > div{
+    padding: 10px;
+    border-radius: 3px;
+    background: #9E9E9E;
+    display: inline-block;
+}
+
+#minuteur div > span{
+    padding: 15px;
+    border-radius: 3px;
+    background: #424242;
+    display: inline-block;
+}
+
+.texteMinuteur{
+    padding-top: 5px;
+    font-size: 16px;
+}
+
+#buttons{
+    margin:10px;
+}
+
+#pause{
+    border: none;
+    color: #fff;
+    background-color: #f44336;
+    padding: 10px 24px;
+}
+
+#reprendre{
+    border: none;
+    color: #fff;
+    background-color: #4CAF50;
+    padding: 10px 24px;
+}
+
+button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+		cursor:pointer;
+}
+/*Style du input range*/
+section {
+    padding-left: 5%;
+}
+input[type=range] {
+    -webkit-appearance: none;
+    border: 1px solid white;
+    width: 300px;
+    cursor: pointer;
+}
+input[type=range]::-webkit-slider-runnable-track { /*Piste du input range*/
+    width: 300px;
+    height: 13px;
+    background: #ddd;
+    border: none;
+    border-radius: 7px;
+}
+input[type=range]::-webkit-slider-thumb { /*Bouton input range*/
+    -webkit-appearance: none;
+    border: none;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: #0091EA;
+    margin-top: -4px;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+input[type=range]::-moz-range-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #0091EA;
+}
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]::-ms-track {
+    width: 300px;
+    height: 5px;
+    background: transparent;
+    border-color: transparent;
+    border-width: 6px 0;
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+}
+input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+}
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+}
+output {
+    font-weight: bold;
+}
+/*Style des boutons radios*/
+/*Nous cachons les boutons radios par défaut pour en créer de nouveaux*/
+input[type="radio"]{
+  display: none;
+}
+.container label {
+  position: relative;
+  margin-left: 4%;
+}
+.container span::before,
+.container span::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.container span.radio:hover {
+  cursor: pointer;
+}
+.container span.radio::before {
+  left: -52px;
+  width: 45px;
+  height: 25px;
+  background-color: #9E9E9E; /*Couleur de fond du bouton*/
+  border-radius: 50px;
+}
+.container span.radio::after {
+  left: -49px;
+  width: 17px;
+  height: 17px;
+  border-radius: 10px;
+  background-color: #616161; /*Couleur initiale du bouton*/
+  transition: left .25s, background-color .25s;
+}
+input[type="radio"]:checked + label span.radio::after {
+  left: -27px;
+  background-color: #4CAF50; /*Couleur du bouton quand sélectionné*/
+}
+
+/*Bouton Submit*/
+input[type=submit]{
+    background-color: #4CAF50;
+    width: 15%;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    padding: 12px 20px;
+}
+
+input[type=submit]:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+/*Affichage du popup*/
+.show {
+    background-color: #00C853;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    color:#000;
+    font-size:1.3em;
+    width:60%;
+    margin-left:19%;
+    margin-right:19%;
+    padding:2%;
+    height: 100px;
+    position : absolute;
+}
+.fermer {
+    position: relative;
+    bottom: 40%;
+    left: 99.5%;
+    font-size : 50px;
+    font-weight: bold;
+    color: #fff;
+}
+.fermer:hover, .fermer:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+footer{
+    margin-top: 13%;
+}
+#resultat{
+    text-align: center;
+}
+/*Animation popup*/
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+/*CSS pour écrans de tablette comprisent entre 960 et 1280 pixels*/
+
+@media all and (min-width: 960px) and (max-width: 1280px){
+    input[type=submit] {
+        width: 20%;
+    }
+    
+    footer {
+        margin-top: 18%;
+    }
+}
+
+@media screen and (max-width: 960px){
+    /*Minuteur*/
+    fieldset{
+        margin-top: 20%;
+    }
+    #minuteur{
+        font-size: 15px;
+    }
+    legend{
+        font-size:1em;
+    }
+    #minuteur > div{
+        padding: 5px;
+    }
+
+    #minuteur div > span{
+        padding: 8px;
+    }
+
+    .texteMinuteur{
+        font-size: 8px;
+    }
+    /*Input Range*/
+    input[type=range] {
+        width: 250px;
+    }
+    /*Boutons Radio*/
+    .container label {
+        position: relative;
+        margin-left: 15%;
+    }
+    
+    input[type=submit] {
+        width: 75%;
+    }
+    
+    footer {
+        margin-top: 66%;
+    }
+    
+    /*Résultat*/
+    .show {
+        height: 200px;
+        font-size: 1.2em;
+    }
+}

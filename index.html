@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html  lang="fr">
+<head>
+    <link rel="icon" type="image/png" media="screen" href="images/favicon.png"/>
+    <link rel="stylesheet" href="styles/commun.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>ACCUEIL - Réalité Virtuelle</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> <!--Malheureusement, la version 3.1.1 de jQuery ne fonctionnait pas.-->
+    <script src="scripts/index.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a class="btn">&#9776;</a>
+            <ul class="menu">
+              <li class="sousMenu">
+                <a href="#" class="sousMenuBtn active">Accueil</a>
+                    <div class="elementsSousMenu">
+                      <a href="#wiki">Présentation</a>
+                      <a href="#videos">Vidéos</a>
+                    </div>
+              </li>
+              <li><a href="pages/google_cardboard.html">Google Cardboard</a></li>
+              <li><a href="pages/samsung_gear_VR.html">Samsung Gear VR</a></li>
+              <li><a href="pages/oculus_rift.html">Oculus Rift</a></li>
+              <li><a href="pages/htc_vive.html">HTC Vive</a></li>
+              <li><a href="pages/questionnaire.html">Questionnaire</a></li>
+            </ul>
+          </li>
+        </ul>
+    </nav>
+    
+    
+    <div id="diaporama">
+        <img class="imagesDiaporama w3-animate-top" src="images/google_vr.jpg" alt="Google Cardboard">
+        <img class="imagesDiaporama w3-animate-bottom" src="images/samsung_vr.jpg" alt="Samsung Gear VR">
+        <img class="imagesDiaporama w3-animate-top" src="images/oculus.jpg" alt="Oculus Rift">
+        <img class="imagesDiaporama w3-animate-bottom" src="images/htc_vr.png" alt="HTC Vive">
+      
+        <p class="messagesDiaporama1">Une nouvelle réalité s'ouvre à vous</p>
+        <p class="messagesDiaporama2">L'art de se divertir</p>
+        <p class="messagesDiaporama3">Repoussez les limites de la réalité</p>
+        <p class="messagesDiaporama4">Découvrez notre sélection de casques VR</p>
+    </div>
+    
+    
+    <!--A l'aide des IDs contenus dans les balises h3, on peut récupérer une dénomination différente pour chaque élément lorsque l'on clique. #Différenciation des éléments-->
+    <section id="wiki">
+        <h3 class="toggle" id="toggle1"><i class="material-icons">add_circle</i> Définition - Réalité Virtuelle</h3>
+            <p id="toggle1Afficher">La réalité virtuelle a pour finalité d'immerger les utilisateurs dans un monde artificiel tri-dimensionnel créé numériquement. Une activité sensori-motrice et cognitive 
+            permet à aux utilisateurs d'interragir avec le monde virtuel. C'est un monde virtuel qui est représenté à l'utilisateur par conséquent l'environnement doit être géométriquement
+            cohérent selon l'angle de vue et la position de l'utilisateur. C'est ainsi que par un système de capture de position du visiteur, la perspective est recalculée en temps réel 
+            pour respecter son point de vue.</p>
+        
+        <h3 class="toggle" id="toggle2"><i class="material-icons">add_circle</i> Mais à quoi sert cette technologie ? Comment ça marche ?</h3>
+            <p id="toggle2Afficher">La réalité virtuelle a pour finalité d'immerger les utilisateurs dans un monde artificiel tri-dimensionnel créé numériquement. Une activité sensori-motrice et cognitive 
+            permet à aux utilisateurs d'interragir avec le monde virtuel. C'est un monde virtuel qui est représenté à l'utilisateur par conséquent l'environnement doit être géométriquement 
+            cohérent selon l'angle de vue et la position de l'utilisateur. C'est ainsi que par un système de capture de position du visiteur, la perspective est recalculée en temps réel 
+            pour respecter son point de vue.</p>
+        
+        <h3 class="toggle" id="toggle3"><i class="material-icons">add_circle</i> Ne pas confondre réalité virtuelle (VR) et réalité augmenté (AR) !</h3>
+            <p id="toggle3Afficher">A la différence de la réalité virtuelle, la réalité augmentée désigne les systèmes informatiques qui rendent possible la superposition d'un modèle virtuel 2D ou 3D à la 
+            perception que nous avons naturellement de la réalité et ceci en temps réel. Elle désigne les différentes méthodes qui permettent d'incruster de façon réaliste des objets 
+            virtuels dans une séquence d'images. C'est ainsi que les <a href="https://fr.wikipedia.org/wiki/Microsoft_HoloLens">Microsoft Hololens</a> et 
+            <a href="https://fr.wikipedia.org/wiki/Google_Glass">Google Glass</a> sont répertoriés dans la catégorie des dispositifs de réalité augmenté.<br/>
+            <img src="images/ar.jpg" alt="Réalité Augmentée"/></p>
+        
+        <h3 class="toggle" id="toggle4"><i class="material-icons">add_circle</i> Histoire</h3>
+            <ul id="toggle4Afficher">
+                <li>Le premier casque de réalité virtuelle a été inventé dans les années 1970 par Daniel Vickers. L'utilisateur pouvait, grâce au casque doté de deux écrans, observer la 
+                scène virtuelle en tournant la tête. La réalité virtuelle utilise des casques depuis ses débuts car les casques permettent d'aveugler l'utilisateur du monde extérieur afin 
+                de l'immerger dans un nouveau monde où son cerveau sera piégé par une illusion et croira que c'est la nouvelle réalité.</li>
+                <li>De nos jours, le casque HTC Vive a 2 manettes pour suivre les mouvements de l'utilisateur. Or un dispositif d'enregistrement des mouvements moteurs de l'utilisateur a 
+                été inventé en 1982. Ce dispositif est un gant de données (DataGlove) et à la capacité de mesurer le déplacement de la main et des doigts et de le communiquer à un 
+                ordinateur.</li>
+                <li>Cependant, étant donné que la naissance des techniques de la réalité virtuelle est étroitement liée à l'évolution de l'informatique, en particulier à celle du traitement
+                d'image, les casques de réalité virtuelle grand public ont dû attendre que des smartphones suffisament puissant soient commercialisés.<br/>C'est ainsi que la réalité 
+                virtuelle grand public n'est réellement apparu qu'à partir de 2010.</li>
+            </ul>
+        <h3 class="toggle" id="toggle5"><i class="material-icons">add_circle</i> La réalité virtuelle grand public</h3>
+            <p  id="toggle5Afficher">De nos jours, il existe deux types de casques de réalité virtuelle sur le marché:<br>
+                    1. Des accessoires tel que le Google Cardboard et le Samsung Galaxy VR qui permettent de brancher le smartphone à l'intérieur du casque afin de l'utiliser comme écran. 
+                    Ces accessoires utilisent le gyroscope et l'accéléromètre de la caméra du smartphone pour repérer les mouvements de la tête de l'utilisateur.<br>
+                    2. Des unités autonomes tel que l'Oculus Rift et le HTC Vive qui disposent en son sein d'un écran, d'un gyroscope, d'un accéléromètre et de capteurs qui traquent les 
+                    mouvements de la tête de l'utilisateur.</p>
+    </section>
+    
+    
+    <section id="videos">
+        <article id="top10">
+            <h2>Top 10 des industries qui utilisent la réalité virtuelle</h2><br/>
+            <video width="640" height="360" poster="images/thumbnail.jpg" controls>
+                <source src="videos/VR.mp4" type="video/mp4">
+                <source src="videos/VR.wmv" type="video/wmv">
+                Votre navigateur internet ne supporte pas les balises video.
+            </video>
+            <div class="imageJouerPause"></div>
+        </article>
+        
+        <article id="vr1991">
+            <h2>La réalité virtuelle de 1991</h2>
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/rVn3H93Ysag?rel=0" allowfullscreen frameBorder="0"></iframe>
+        <article>
+    </section>
+    
+    
+    <section id="formulaire">
+        <h2>CONTACT</h2><br>
+            <form action="mailto:21603519@etu.unicaen.fr" method="post" autocomplete="on">
+              <span>Sujet</span><br>
+              <select name="sujet">
+                  <option value="question">Question Générale</option>
+                  <option value="reaction">Réaction/Commentaire</option>
+                  <option value="commerciale">Demande Commerciale</option>
+                  <option value="autre">Autre</option>
+              </select><br/>
+              <span>Email</span><br>
+              <input type="email" name="email" placeholder="Nous vous contacterons à cette adresse email." size="30" required><br/>
+              <span>Titre</span><br>
+              <input type="text" name="titre" placeholder="Expliquez le problème en une phrase" size="30" required><br/>
+              <span>Détails</span><br>
+              <textarea name="details" rows="10" cols="32" required>Expliquez le problème ou la question en détail.</textarea><br/>
+              <input type="submit" value="Envoyer la requête">
+              <input type="reset">
+            </form>
+    </section>
+    
+    <footer>
+        <ul id="planSite">
+            <li><h4>Plan du Site</h4></li>
+            <li><a href="pages/google_cardboard.html">Google Cardboard</a></li>
+            <li><a href="pages/samsung_gear_VR.html">Samsung Gear VR</a></li>
+            <li><a href="pages/oculus_rift.html">Oculus Rift</a></li>
+            <li><a href="pages/htc_vive.html">HTC Vive</a></li>
+            <li><a href="pages/questionnaire.html">Questionnaire</a></li>
+        </ul>
+        <ul id="documentation">
+            <li><h4>Documentation</h4></li>
+            <li><a href="https://vr.google.com/cardboard/">Google VR</a></li>
+            <li><a href="http://www.samsung.com/global/galaxy/gear-vr/">Samsung</a></li>
+            <li><a href="https://www3.oculus.com/en-us/rift/">Oculus</a></li>
+            <li><a href="https://www.vive.com/fr/product/">Vive</a></li>
+            <li><a href="https://www.wikipedia.org/">Wikipedia</a></li>
+            <li><a href="http://www.realite-virtuelle.com/">Réalité-Virtuelle.com</a></li>
+        </ul>
+        <ul id="ressources">
+            <li><h4>Ressources Utilisées</h4></li>
+            <li><a href="http://www.w3schools.com/">W3Schools</a></li>
+            <li><a href="https://developers.google.com/web/">Google Developers</a></li>
+            <li><a href="https://design.google.com/">Google Design</a></li>
+            <li><a href="http://stackoverflow.com/">Stack Overflow</a></li>
+            <li><a href="http://www.alsacreations.com/">Alsacréations</a></li>
+        </ul>
+        <img src="images/theBigBangTheoryVR.gif" alt="Sheldon Cooper de la série The Big Bang Theory essaye la réalité virtuelle.">
+        <hr>
+        <p>&copy; Copyright TSANG Thierry et QUELLIER Vincent /// L1 Informatique 2016-2017</p>
+    </footer>
+    
+    
+    <a href="#" class="boutonHaut">Top</a>
+</body>
+</html>
+
+<!--TSANG Thierry-->
